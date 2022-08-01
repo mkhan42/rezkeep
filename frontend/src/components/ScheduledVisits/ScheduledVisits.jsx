@@ -55,9 +55,12 @@ function ScheduledVisits({ upcomings }) {
   return (
     <div className="move-user">
       <div className="move-card">
-        <h1>Hello, {user.username}</h1>
-        <h1>Scheduled</h1>
+        <h1 className="my-user-schedule">Hello, <span className="my-user-schedule-span">{user.username}</span></h1>
+        <br/>
+        <h1 className="my-scheduled">Scheduled Events</h1>
+        <br/>
         <p>If this is blank, it's because you haven't added anything yet!</p>
+        <br/>
         <div class="my-list-card card scroll-cards-height">
           {upcomings.map((upcoming) => {
             if (upcoming.user === user?.user_id) {
@@ -119,7 +122,7 @@ function ScheduledVisits({ upcomings }) {
                         </div>
                         <Link
                           state={upcomings}
-                          className="btn btn-outline-primary mr-2"
+                          className="btn"
                           to={`/${upcoming.id}/edit`}
                         >
                           Edit

@@ -1,7 +1,8 @@
 .move-card {
-    margin-top: 250px;
+    margin-top: 240px;
     margin-bottom: 200px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* .card-horizontal {
@@ -26,11 +27,27 @@ width: 50% !important;
 }
 
 .my-list-card {
-    background-color: whitesmoke !important;
+    /* background-color: whitesmoke !important; */
+    background: url('https://images.unsplash.com/photo-1607499457689-3fd1ac3ffcdd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80') !important;
+    box-shadow: 5px 5px 5px rgb(71, 0, 0) !important;
 }
 
 .my-list-card-two {
-    background-color: beige !important;
+    background-color: plum !important;
     width: 80% !important;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0) !important;
+
+}
+
+.my-user-schedule-span{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.my-user-schedule{
+    font-size: 50px;
+}
+
+.my-scheduled {
 
 }
