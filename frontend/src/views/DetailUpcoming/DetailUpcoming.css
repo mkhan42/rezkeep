@@ -1,32 +1,79 @@
 .move-detail-card {
     margin-top: 280px;
     margin-bottom: 20%;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .add-rating-form {
     width: 20%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .my-order-btn {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .add-order-form {
     width: 30%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .add-order-form {
     width: 30%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .my-comment-form {
     width: 50%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .order-div {
-    text-align: center;
+    /* text-align: center; */
+}
+
+.my-rest-visit{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.my-rest-name{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.my-add-span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.my-add-p{
+    font-size: 18px;
+}
+
+.my-menu-label {
+    font-weight: bold;
+}
+
+.my-menu-item {
+    font-weight: bold;
+}
+
+.my-menu-price {
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.my-new-order-btn{
+    background-color: #d3a7df !important;
+}
+
+.my-delete-order-btn {
+    background-color: #d3a7df !important;
+    margin-left: 10px;
+    padding: 2px !important;
+}
+
+.my-detail-card{
+    background-color:#ded0fb !important;
 }

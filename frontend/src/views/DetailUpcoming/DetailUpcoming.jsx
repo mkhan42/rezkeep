@@ -217,17 +217,19 @@ const DetailUpcoming = () => {
 
   return (
     <div className="move-detail-card">
-      <div class="card" style={{ width: "18rem" }}>
-        <h2>Resturant Visit Details</h2>
+      <div class="card my-detail-card" style={{ width: "18rem" }}>
+        <h2 className="my-rest-visit">Resturant Visit Details</h2>
         <hr></hr>
         <div>
-          <h3>{upcoming.resturant_name}</h3>
+          <h3 className="my-rest-name">{upcoming.resturant_name}</h3>
           <img src={upcoming.resturant_img} class="card-img-top" alt="..." />
+          <br/>
+          <br/>
           <div>
-            <p>Address: {upcoming.address}</p>
-            <p>Food Type: {upcoming.cusine_type}</p>
-            <p>
-              Visit Date:{" "}
+            <p className="my-add-p"><span className="my-add-span">Address:</span> <span className="my-add-indent">{upcoming.address}</span></p>
+            <p className="my-add-p"><span className="my-add-span">Food Type:</span> {upcoming.cusine_type}</p>
+            <p className="my-add-p"> <span className="my-add-span">
+              Visit Date:</span>{" "}
               {new Date(upcoming.date).toLocaleDateString("en-us", {
                 weekday: "long",
                 year: "numeric",
@@ -235,7 +237,7 @@ const DetailUpcoming = () => {
                 day: "numeric",
               })}
             </p>
-            <p>Visit Time: {upcoming.time}</p>
+            <p className="my-add-p"><span className="my-add-span">Visit Time:</span>{upcoming.time}</p>
           </div>
         </div>
 
@@ -244,25 +246,27 @@ const DetailUpcoming = () => {
         {upcoming.date < today && (
           <>
             <div className="order-div">
-              Orders
+              <h5>Orders</h5>
               {order.map((or) => {
                 return (
                   <div key={or.id}>
-                    Menu Item: {or.name} Price: ${or.price}
-                    <button className="btn" onClick={(e) => deleteOrder(or.id)}>
-                      Delete
+                    <span className="my-menu-item">Menu Item</span>: {or.name} <span className="my-menu-price">Price</span>: ${or.price}
+                    <button className="btn my-delete-order-btn" onClick={(e) => deleteOrder(or.id)}>
+                      <img src="https://img.icons8.com/parakeet/344/experimental-trash-parakeet.png" width="20px"/>
                     </button>
+                    <br/>
+                    <br/>
                   </div>
                 );
               })}
             </div>
 
-
-            <hr></hr>
+              <br/>
             <form className="add-order-form" onSubmit={handleOrderSubmit}>
-              <label htmlFor="name" className="form-label">
+              <label htmlFor="name" className="form-label my-menu-label">
                 Menu Item Name
               </label>
+              <br/>
               <input
                 type="text"
                 name="name"
@@ -271,7 +275,8 @@ const DetailUpcoming = () => {
                 value={newOrder.name}
                 onChange={handleOrderChange}
               />
-              <label htmlFor="price" className="form-label">
+              <br/>
+              <label htmlFor="price" className="form-label my-menu-label">
                 Price
               </label>
               <input
@@ -283,53 +288,36 @@ const DetailUpcoming = () => {
                 onChange={handleOrderChange}
               />
               <div className="my-order-btn">
-              <button className="btn" type="submit">
+              <button className="btn my-new-order-btn" type="submit">
                 Add Order
               </button>
               </div>
             </form>
 
+            <hr/>
+
             <div>
+            <h5>Rating</h5>
               {rating.map((rate) => {
                 return (
                   <div key={rate.id}>
-                    Rating: {rate.rating} out of 5
+                  <span className="my-menu-item">Rating:</span> {rate.rating} <span className="my-menu-item">out of 5</span>
                     <button
-                      className="btn"
+                      className="btn my-delete-order-btn"
                       onClick={(e) => deleteRating(rate.id)}
                     >
-                      Delete
+                       <img src="https://img.icons8.com/parakeet/344/experimental-trash-parakeet.png" width="20px"/>
                     </button>
                   </div>
                 );
               })}
             </div>
-
-            <hr></hr>
-
-            <div>
-              {comment.map((com) => {
-                return (
-                  <div key={com.id}>
-                    Review: {com.content}
-                    <button
-                      className="btn"
-                      onClick={(e) => deleteComment(com.id)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-
-            <hr></hr>
 
             {rating.length === 0 && (
               <>
                 <form className="add-rating-form" onSubmit={handleRatingSubmit}>
-                  <label htmlFor="rating" className="form-label">
-                    Rating out of 5
+                  <label htmlFor="rating" className="form-label my-menu-label">
+                  Rating out of 5
                   </label>
                   <select
                     className="my-form-control form-control"
@@ -344,7 +332,7 @@ const DetailUpcoming = () => {
                     <option>5</option>
                   </select>
                   <div className="my-order-btn">
-                  <button className="btn" type="submit">
+                  <button className="btn my-new-order-btn" type="submit">
                     Add Rating
                   </button>
                   </div>
@@ -354,11 +342,28 @@ const DetailUpcoming = () => {
 
             <hr></hr>
 
+            <div>
+            <h5>Review</h5>
+              {comment.map((com) => {
+                return (
+                  <div key={com.id}>
+                    <span className="my-menu-item">Review:</span> {com.content}
+                    <button
+                      className="btn my-delete-order-btn"
+                      onClick={(e) => deleteComment(com.id)}
+                    >
+                      <img src="https://img.icons8.com/parakeet/344/experimental-trash-parakeet.png" width="20px"/>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
             {comment.length === 0 && (
               <>
                 <form className="my-comment-form" onSubmit={handleCommentSubmit}>
-                  <label htmlFor="content" className="form-label">
-                    Review?
+                  <label htmlFor="content" className="form-label my-menu-label">
+                    Write a Review
                   </label>
                   <textarea
                     className="form-control"
@@ -368,14 +373,17 @@ const DetailUpcoming = () => {
                     value={newComment.content}
                     onChange={handleCommentChange}
                   />
+                  <br/>
                   <div className="my-order-btn">
-                  <button className="btn" type="submit">
+                  <button className="my-new-order-btn btn" type="submit">
                     Add Review
                   </button>
                   </div>
                 </form>
               </>
             )}
+
+            <hr></hr>
           </>
         )}
       </div>

@@ -1,16 +1,20 @@
 .move-form {
-    margin-top: 280px;
+    margin-top: 250px;
     margin-bottom: 20%;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .add {
     text-align: center;
     margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .add-card {
-    background-color: aliceblue !important;
+    background-color: #ded0fb !important;
     width: 60% !important;
+    box-shadow: 5px 5px 5px rgb(52, 1, 80);
 }
 
 .add-form {
@@ -21,8 +25,24 @@
 .my-add-btn {
     margin: auto !important;
     text-align: center !important;
+
+}
+
+.my-add-btn-new {
+    background-color: #d3a7df !important;
+
+}
+
+.my-add-btn-new:hover{
+    filter:brightness(120%);
+    box-shadow: 10px 10px 10px rgb(110, 81, 123)
 }
 
 .my-form-control {
     margin-bottom: 5%;
+}
+
+.my-add-form-label{
+    font-weight: bold;
+    font-size: 20px;
 }

@@ -15,15 +15,18 @@ const LoginPage = () => {
 
   return (
     <div className='login-form'>
+    <br></br>
     <div className="card my-log-card">
     <div className="card-body">
       <form onSubmit={handleSubmit}>
         <h1>Login </h1>
         <hr />
-        <label htmlFor="username">Username</label>
+        <label className="form-label my-log-label" htmlFor="username">Username</label>
         <input className="form-control" type="text" id="username" placeholder="Enter Username" />
-        <label htmlFor="password">Password</label>
+        <br/>
+        <label className="form-label my-log-label" htmlFor="password">Password</label>
         <input className="form-control" type="password" id="password" placeholder="Enter Password" />
+        <br/>
         <button className="btn" type="submit">Login</button>
       </form>
       </div>

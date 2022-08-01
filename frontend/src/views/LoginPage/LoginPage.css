@@ -1,4 +1,14 @@
 .login-form {
     margin-top: 20px;
     margin-bottom: 200px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.my-log-label{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.my-log-card {
+    background-color: #ded0fb !important;
 }

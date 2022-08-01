@@ -64,28 +64,30 @@ function NewPostPage({}) {
         <form className="add-form" onSubmit={handleSubmit}>
         <div class="card-body">
                <div className='mb-3'>
-                   <label htmlFor='resturant_name' className='form-label'>Restaurant Name</label>
+                   <label htmlFor='resturant_name' className='form-label my-add-form-label'>Restaurant Name</label>
                    <input type="text" name="resturant_name" className='form-control my-form-control' id="resturant_name" placeholder='Enter Restaurant' value={newUpcoming.resturant_name} onChange={handleChange}/>
                    
-                   <label htmlFor='resturant_img' className='form-label'>Restaurant Img URL</label>
+                   <label htmlFor='resturant_img' className='form-label my-add-form-label'>Restaurant Img URL</label>
                    <input type="text" className='form-control my-form-control' name="resturant_img" id="resturant_img" placeholder='Enter Restaurant Img URL' onChange={handleChange} value={newUpcoming.resturant_img}/>
                    
-                   <label htmlFor='address' className='form-label'>Restaurant Address</label>
+                   <label htmlFor='address' className='form-label my-add-form-label'>Restaurant Address</label>
                    <input type="text" className='form-control my-form-control' name="address" id="address" placeholder='Enter Restaurant Address' onChange={handleChange} value={newUpcoming.address} />
 
-                   <label htmlFor='cusine_type' className='form-label '>Cusine Type</label>
+                   <label htmlFor='cusine_type' className='form-label my-add-form-label'>Cusine Type</label>
                    <input type="text" className='form-control my-form-control' name="cusine_type" id="cusine_type" placeholder='Enter Type of Cusine' onChange={handleChange} value={newUpcoming.cusine_type}/>
                    
                    
-                   <label htmlFor='date' className='form-label'>Date of Visit</label>
+                   <label htmlFor='date' className='form-label my-add-form-label'>Date of Visit</label>
                    <input type="date" className='form-control my-form-control' name="date" id="date" placeholder='Enter Date of Visit' onChange={handleChange} value={newUpcoming.date} />
                    
-                   <label htmlFor='time' className='form-label'>Time of Visit</label>
+                   <label htmlFor='time' className='form-label my-add-form-label'>Time of Visit</label>
                    <input type="time" className='form-control my-form-control' name="time" id="time" placeholder='Enter Time of Visit' onChange={handleChange} value={newUpcoming.time} />
+
+                   <p>*All fields are required</p>
 
                     <br></br>
                     <div className='my-add-btn'>
-                        <button className="btn my-add-btn" type='submit'>Add a Visit</button>
+                        <button className="btn my-add-btn-new" type='submit'>Add a Visit</button>
                       </div>
                </div>
                </div>

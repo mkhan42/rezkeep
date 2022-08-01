@@ -20,7 +20,7 @@ function Register() {
         <h1>Register</h1>
         <hr />
         <div>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username" className="form-label my-log-label">Username</label>
           <input
             type="text"
             className="form-control"
@@ -30,8 +30,9 @@ function Register() {
             required
           />
         </div>
+        <br></br>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="form-label my-log-label">Password</label>
           <input
             type="password"
             className="form-control"
@@ -41,8 +42,9 @@ function Register() {
             required
           />
         </div>
+        <br/>
         <div>
-          <label htmlFor="confirm-password">Confirm Password</label>
+          <label className="form-label my-log-label" htmlFor="confirm-password">Confirm Password</label>
           <input
             type="password"
             className="form-control"
@@ -53,7 +55,8 @@ function Register() {
           />
           <p>{password2 !== password ? "Passwords do not match" : ""}</p>
         </div>
-        <button>Register</button>
+        <br/>
+        <button className="btn">Register</button>
       </form>
       </div>
       </div>
