@@ -1,0 +1,15 @@
+.App {
+  min-height: 100vh;
+  /* text-align: center; */
+  /* background-color: #282c34;
+  color: white;
+  padding: 20px; */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.hrClass {
+  background-color: white;
+}

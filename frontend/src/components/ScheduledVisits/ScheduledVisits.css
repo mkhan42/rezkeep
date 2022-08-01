@@ -1,0 +1,36 @@
+.move-card {
+    margin-top: 250px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+/* .card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+} */
+
+.scroll-cards-height {
+position: relative !important;
+overflow-y: scroll !important;
+height:600px !important; 
+width: 50% !important;
+}
+
+/* .card-img-top {
+    height: 20vw;
+    width: 55vw;
+} */
+
+.my-list-title {
+    background-color: aliceblue !important;
+}
+
+.my-list-card {
+    background-color: whitesmoke !important;
+}
+
+.my-list-card-two {
+    background-color: beige !important;
+    width: 80% !important;
+
+}

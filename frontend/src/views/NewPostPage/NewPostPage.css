@@ -1,0 +1,28 @@
+.move-form {
+    margin-top: 280px;
+    margin-bottom: 20%;
+}
+
+.add {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.add-card {
+    background-color: aliceblue !important;
+    width: 60% !important;
+}
+
+.add-form {
+    width: 80%;
+    margin: auto;
+}
+
+.my-add-btn {
+    margin: auto !important;
+    text-align: center !important;
+}
+
+.my-form-control {
+    margin-bottom: 5%;
+}

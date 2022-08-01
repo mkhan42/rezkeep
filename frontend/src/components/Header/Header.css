@@ -1,0 +1,15 @@
+.my-title {
+    text-align: center;
+    color: #5c494f;
+    overflow: hidden;
+    /* background-color: #A3A3CD; */
+    /* position: absolute; */
+    /* padding: 20px 10px;
+    height: 100px !important; */
+}
+
+.title {
+    font-size: 50px;
+    height: 100px !important;
+    background-color: #A3A3CD !important;
+}
