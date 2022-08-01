@@ -24,7 +24,6 @@ function Register() {
           <input
             type="text"
             className="form-control"
-
             id="username"
             onChange={e => setUsername(e.target.value)}
             placeholder="Username"
@@ -59,7 +58,6 @@ function Register() {
       </div>
       </div>
     </div>
-
   );
 }
 
