@@ -3,6 +3,7 @@
     margin-bottom: 200px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    color: rgb(60, 0, 63);
 }
 
 /* .card-horizontal {
@@ -48,6 +49,29 @@ width: 50% !important;
     font-size: 50px;
 }
 
-.my-scheduled {
+.my-planned-date-span{
+    font-weight: bold;
+}
 
+.my-schedule-btn{
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 15px;
+    /* box-shadow: 5px 5px 5px rgb(95, 45, 122); */
+    background-color: aliceblue !important;
+    margin-left: 10px !important;
+}
+
+.my-schedule-btn:hover {
+    filter:brightness(120%);
+    box-shadow: 10px 10px 10px rgb(0, 0, 0)
+}
+
+.my-schedule-btn:active {
+    box-shadow: inset 2px 2px 10px rgb(255, 255, 255);
+}
+
+.my-schedule-p {
+    font-size: 20px;
+    text-decoration: underline;
 }

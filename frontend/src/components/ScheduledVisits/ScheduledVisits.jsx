@@ -45,21 +45,14 @@ function ScheduledVisits({ upcomings }) {
     window.location.href = "/scheduled";
   };
 
-
-  const options = {
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  };
-
   return (
     <div className="move-user">
       <div className="move-card">
         <h1 className="my-user-schedule">Hello, <span className="my-user-schedule-span">{user.username}</span></h1>
         <br/>
-        <h1 className="my-scheduled">Scheduled Events</h1>
+        <h1 className="my-scheduled">Welcome to your <span className="my-user-schedule-span">Scheduled Events</span></h1>
         <br/>
-        <p>If this is blank, it's because you haven't added anything yet!</p>
+        <p className="my-schedule-p">If this is blank, it's because you haven't added anything yet!</p>
         <br/>
         <div class="my-list-card card scroll-cards-height">
           {upcomings.map((upcoming) => {
@@ -87,8 +80,8 @@ function ScheduledVisits({ upcomings }) {
                               {upcoming.resturant_name}
                             </h6>
                           </Link>
-                          <p class="card-text">
-                            Planned Date:{" "}
+                          <p class="card-text my-card-text">
+                            <span className="my-planned-date-span"> Planned Date</span>: {" "}
                             {new Date(upcoming.date).toLocaleDateString(
                               "en-us",
                               {
@@ -100,11 +93,13 @@ function ScheduledVisits({ upcomings }) {
                             )}
                           </p>
 
-                          <p class="card-text">Planned Time: {" "} {upcoming.time}</p>
+                          <hr/>
+
+                          <p class="card-text"><span className="my-planned-date-span">Planned Time</span>: {" "} {upcoming.time}</p>
 
                           <div class="card-footer">
                             <span class="float-left ml-n4">
-                              Created:{" "}
+                            <span className="my-planned-date-span">Created</span>:{" "}
                               {new Date(upcoming.created_at).toLocaleDateString(
                                 "en-us",
                                 {
@@ -121,15 +116,15 @@ function ScheduledVisits({ upcomings }) {
                           </div>
                         </div>
                         <Link
-                          state={upcomings}
-                          className="btn"
-                          to={`/${upcoming.id}/edit`}
-                        >
-                          Edit
-                        </Link>
-                        <button className="btn" onClick={(e) => deletePost(upcoming.id)}>
-                          Delete
-                        </button>
+                        state={upcomings}
+                        className="btn my-schedule-btn"
+                        to={`/${upcoming.id}/edit`}
+                      >
+                        Edit <img src="https://img.icons8.com/ultraviolet/344/edit.png" width="20px"/>
+                      </Link>
+                      <button className="btn my-schedule-btn" onClick={(e) => deletePost(upcoming.id)}>
+                        Delete <img src="https://img.icons8.com/parakeet/344/experimental-trash-parakeet.png" width="20px"/>
+                      </button>
                       </div>
                     </div>
                   </div>

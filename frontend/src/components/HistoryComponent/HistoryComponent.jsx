@@ -43,90 +43,92 @@ const deletePost = (id) => {
 
 let today = new Date().toISOString().slice(0, 10)
 
-  return (
-    <div className="move-user">
-      <div className="move-card">
-        <h1>Hello, {user.username}</h1>
-        <h1>Past Visits</h1>
-        <p>If this is blank, it's because you haven't added anything yet!</p>
-        <div class="my-list-card card scroll-cards-height">
-          {upcomings.map((upcoming) => {
-            if (upcoming.user === user?.user_id) {
-              console.log(today);
-              console.log(upcoming.date);
-              if (upcoming.date < today) {
-                return (
-                  <div key={upcoming.id}>
-                    <div class="my-list-card-two card mb-4 mr-2 ml-2">
-                      <div class="card-horizontal pt-1 mb-1 ml-1">
-                        <div class="view overlay">
-                          <Link state={upcomings} to={`/${upcoming.id}`}>
-                            <img
-                              class="card-img-top"
-                              src={upcoming.resturant_img}
-                            />
-                          </Link>
+return (
+  <div className="move-user">
+    <div className="move-card">
+      <h1 className="my-user-schedule">Hello, <span className="my-user-schedule-span">{user.username}</span></h1>
+      <br/>
+      <h1>Welcome to your <span className="my-user-schedule-span">Past Events</span></h1>
+      <br/>
+      <p className="my-schedule-p">If this is blank, it's because you haven't added anything yet!</p>
+      <br/>
+      <div class="my-list-card card scroll-cards-height">
+        {upcomings.map((upcoming) => {
+          if (upcoming.user === user?.user_id) {
+            console.log(today);
+            console.log(upcoming.date);
+            if (upcoming.date < today) {
+              return (
+                <div key={upcoming.id}>
+                  <div class="my-list-card-two card mb-4 mr-2 ml-2">
+                    <div class="card-horizontal pt-1 mb-1 ml-1">
+                      <div class="view overlay">
+                        <Link state={upcomings} to={`/${upcoming.id}`}>
+                          <img
+                            class="card-img-top"
+                            src={upcoming.resturant_img}
+                          />
+                        </Link>
 
-                          <div class="mask rgba-white-slight"></div>
-                        </div>
-                        <div class="card-body">
-                          <Link state={upcomings} to={`/${upcoming.id}`}>
-                            <h6 class="card-title my-list-title">
-                              {upcoming.resturant_name}
-                            </h6>
-                          </Link>
-                          <p class="card-text">
-                            Date Visted:{" "}
-                            {new Date(upcoming.date).toLocaleDateString(
+                        <div class="mask rgba-white-slight"></div>
+                      </div>
+                      <div class="card-body">
+                        <Link state={upcomings} to={`/${upcoming.id}`}>
+                          <h6 class="card-title my-list-title">
+                            {upcoming.resturant_name}
+                          </h6>
+                        </Link>
+                        <p class="card-text my-card-text">
+                          <span className="my-planned-date-span"> Planned Date</span>: {" "}
+                          {new Date(upcoming.date).toLocaleDateString(
+                            "en-us",
+                            {
+                              weekday: "long",
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric"
+                            }
+                          )}
+                        </p>
+                        <div class="card-footer">
+                          <span class="float-left ml-n4">
+                          <span className="my-planned-date-span">Created</span>:{" "}
+                            {new Date(upcoming.created_at).toLocaleDateString(
                               "en-us",
                               {
                                 weekday: "long",
                                 year: "numeric",
                                 month: "short",
-                                day: "numeric"
+                                day: "numeric",
+                                hour: "numeric",
+                                minute: "numeric",
+                                hour12: true,
                               }
                             )}
-                          </p>
-
-                          <div class="card-footer">
-                            <span class="float-left ml-n4">
-                              Created:{" "}
-                              {new Date(upcoming.created_at).toLocaleDateString(
-                                "en-us",
-                                {
-                                  weekday: "long",
-                                  year: "numeric",
-                                  month: "short",
-                                  day: "numeric",
-                                  hour: "numeric",
-                                  minute: "numeric",
-                                  hour12: true,
-                                }
-                              )}
-                            </span>
-                          </div>
+                          </span>
                         </div>
-                        <Link
-                          state={upcomings}
-                          className="btn btn-outline-primary mr-2"
-                          to={`/${upcoming.id}/edit`}
-                        >
-                          Edit
-                        </Link>
-                        <button className="btn" onClick={(e) => deletePost(upcoming.id)}>
-                          Delete
-                        </button>
                       </div>
+                      <Link
+                        state={upcomings}
+                        className="btn my-schedule-btn"
+                        to={`/${upcoming.id}/edit`}
+                      >
+                        Edit <img src="https://img.icons8.com/ultraviolet/344/edit.png" width="20px"/>
+                      </Link>
+                      <button className="btn my-schedule-btn" onClick={(e) => deletePost(upcoming.id)}>
+                        Delete <img src="https://img.icons8.com/parakeet/344/experimental-trash-parakeet.png" width="20px"/>
+                      </button>
                     </div>
                   </div>
-                );
-              }
+                </div>
+              );
             }
-          })}
-        </div>
+          }
+        })}
       </div>
     </div>
-  );
+  </div>
+);
 }
 
 export default HistoryComponent;
