@@ -2,6 +2,7 @@
     margin-top: 320px;
     margin-bottom: 200px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -17,4 +18,8 @@
 .card-title {
     background-color: #f9dbd1 !important;
     padding: 2%;
+}
+
+.app-name{
+    font-family: 'Mochiy Pop One', sans-serif;
 }
