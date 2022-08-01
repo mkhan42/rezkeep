@@ -11,4 +11,16 @@
 
 .my-log-card {
     background-color: #ded0fb !important;
+    box-shadow: 5px 5px 5px rgb(52, 1, 80);
+}
+
+
+.my-reg-btn {
+    background-color: #d3a7df !important;
+
+}
+
+.my-reg-btn:hover{
+    filter:brightness(120%);
+    box-shadow: 10px 10px 10px rgb(110, 81, 123)
 }

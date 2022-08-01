@@ -27,7 +27,7 @@ const LoginPage = () => {
         <label className="form-label my-log-label" htmlFor="password">Password</label>
         <input className="form-control" type="password" id="password" placeholder="Enter Password" />
         <br/>
-        <button className="btn" type="submit">Login</button>
+        <button className="btn my-reg-btn" type="submit">Login</button>
       </form>
       </div>
       </div>

@@ -56,7 +56,7 @@ function Register() {
           <p>{password2 !== password ? "Passwords do not match" : ""}</p>
         </div>
         <br/>
-        <button className="btn">Register</button>
+        <button className="btn my-reg-btn">Register</button>
       </form>
       </div>
       </div>
