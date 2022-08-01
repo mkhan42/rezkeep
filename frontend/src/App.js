@@ -24,6 +24,7 @@ import HistoryPage from "./components/HistoryComponent/HistoryComponent";
 import ScheduledVisits from "./components/ScheduledVisits/ScheduledVisits";
 import Header from "./components/Header/Header";
 
+const baseURL = `http://127.0.0.1:8000/api`;
 
 
 function App({ user }) {
@@ -32,7 +33,7 @@ function App({ user }) {
   function getResturants() {
     let data;
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}`)
+      .get(`${baseURL}/upcomings/`)
       .then((res) => {
         data = res.data;
         setUpcomings(data);

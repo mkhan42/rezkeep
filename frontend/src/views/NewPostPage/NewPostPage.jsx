@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './NewPostPage.css';
 
+const baseURL = `http://127.0.0.1:8000/api`;
 
 function NewPostPage({}) {
   const { user, logoutUser } = useContext(AuthContext);
@@ -39,7 +40,7 @@ function NewPostPage({}) {
 
         function handleSubmit(e) {
         e.preventDefault();
-        axios.post(`${process.env.REACT_APP_BASE_URL}`, { ...newUpcoming }).then((res) => {
+        axios.post(`${baseURL}/upcomings/`, { ...newUpcoming }).then((res) => {
               setNewUpcoming({})
         //   window.location.href = `/${json._id}`;
         }).catch ((err) => {

@@ -2,6 +2,9 @@ import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import AuthContext from '../../context/AuthContext'
 import axios from 'axios'
+
+const baseURL = `http://127.0.0.1:8000/api`;
+
 function HistoryComponent({ upcomings }) {
   let { id } = useParams();
   const location =useLocation()
@@ -22,7 +25,7 @@ function HistoryComponent({ upcomings }) {
 const [deleted, setDeleted] = useState(false);
 
 const deletePost = (id) => {
-  axios.delete(`${process.env.REACT_APP_BASE_URL}${id}/`)
+  axios.delete(`${baseURL}/upcomings/${id}/`)
     .then((response) => {
       setDeleted(true);
     })

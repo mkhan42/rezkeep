@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import "./DetailUpcoming.css";
 
+const baseURL = `http://127.0.0.1:8000/api`;
+
 const DetailUpcoming = () => {
   const { id } = useParams();
 
@@ -34,7 +36,7 @@ const DetailUpcoming = () => {
 
   const getOne = async () => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}${id}/`
+      `${baseURL}/upcomings/${id}/`
     );
     console.log(data);
     setUpcoming(data);
@@ -46,7 +48,7 @@ const DetailUpcoming = () => {
   function getOrder() {
     let data;
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}${id}/orders/`)
+      .get(`${baseURL}/upcomings/${id}/orders/`)
       .then((res) => {
         data = res.data;
         setOrder(data);
@@ -74,7 +76,7 @@ const DetailUpcoming = () => {
   function handleOrderSubmit(e) {
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_BASE_URL}${id}/orders/`, {
+      .post(`${baseURL}/upcomings/${id}/orders/`, {
         ...newOrder,
       })
       .then((res) => {
@@ -90,7 +92,7 @@ const DetailUpcoming = () => {
 
   const deleteOrder = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_BASE_URL}${id}/orders/${id}/`)
+      .delete(`${baseURL}/${id}/orders/${id}/`)
       .then((response) => {
         setDeletedOrder(true);
       })
@@ -103,7 +105,7 @@ const DetailUpcoming = () => {
   function getRating() {
     let data;
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}${id}/ratings/`)
+      .get(`${baseURL}/upcomings/${id}/ratings/`)
       .then((res) => {
         data = res.data;
         setRating(data);
@@ -131,7 +133,7 @@ const DetailUpcoming = () => {
   function handleRatingSubmit(e) {
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_BASE_URL}${id}/ratings/`, {
+      .post(`${baseURL}/upcomings/${id}/ratings/`, {
         ...newRating,
       })
       .then((res) => {
@@ -146,7 +148,7 @@ const DetailUpcoming = () => {
 
   const deleteRating = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_BASE_URL}${id}/ratings/${id}/`)
+      .delete(`${baseURL}/upcomings/${id}/ratings/${id}/`)
       .then((response) => {
         setDeletedRating(true);
       })
@@ -159,7 +161,7 @@ const DetailUpcoming = () => {
   function getComment() {
     let data;
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}${id}/comments/`)
+      .get(`${baseURL}/upcomings/${id}/comments/`)
       .then((res) => {
         data = res.data;
         setComment(data);
@@ -187,7 +189,7 @@ const DetailUpcoming = () => {
   function handleCommentSubmit(e) {
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_BASE_URL}${id}/comments/`, {
+      .post(`${baseURL}/upcomings/${id}/comments/`, {
         ...newComment,
       })
       .then((res) => {
@@ -202,7 +204,7 @@ const DetailUpcoming = () => {
 
   const deleteComment = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_BASE_URL}${id}/comments/${id}/`)
+      .delete(`${baseURL}/upcomings/${id}/comments/${id}/`)
       .then((response) => {
         setDeletedComment(true);
       })

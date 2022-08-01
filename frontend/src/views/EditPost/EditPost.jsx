@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 
+const baseURL = `http://127.0.0.1:8000/api`;
+
 function EditPost({ upcomings }) {
     const location = useLocation()
     const upcomingList = location.state
@@ -38,7 +40,7 @@ function EditPost({ upcomings }) {
 
       function handleSubmit(e) {
         e.preventDefault();
-        axios.put(`${process.env.REACT_APP_BASE_URL}${id}/`, { ...editUpcoming }).then((res) => {
+        axios.put(`${baseURL}/upcomings/${id}/`, { ...editUpcoming }).then((res) => {
               setEditUpcoming({})
         //   window.location.href = `/${json._id}`;
         }).catch ((err) => {
