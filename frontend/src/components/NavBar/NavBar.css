@@ -24,6 +24,8 @@
     background-color: #f9dbd1;
 }
 
+
+
 .container-fluid {
     /* text-align: left !important; */
 }
@@ -31,6 +33,19 @@
 .my-btn {
     background-color: #fbb7a0 !important;
     margin-left: 10px;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgb(126, 64, 64);
+}
+
+.my-btn:hover {
+    filter:brightness(120%);
+    box-shadow: 10px 10px 10px rgb(123, 81, 81)
+}
+
+.my-btn:active {
+    box-shadow: inset 2px 2px 10px rgb(103, 18, 18);
 }
 
 .my-log-btn {
