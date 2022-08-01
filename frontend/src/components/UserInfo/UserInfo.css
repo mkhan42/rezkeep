@@ -1,5 +1,5 @@
 .move-down {
-    margin-top: 320px;
+    margin-top: 250px;
     margin-bottom: 200px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -16,10 +16,45 @@
 }
 
 .card-title {
-    background-color: #f9dbd1 !important;
+    background-color: #fbb7a0 !important;
     padding: 2%;
+    box-shadow: 5px 5px 5px #000;
+    /* font-size: 30px; */
 }
 
 .app-name{
     font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.my-home-card{
+    background: url('https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60');
+    box-shadow: 5px 5px 5px #000;
+}
+
+.my-home-btn{
+    background-color: #fbb7a0 !important;
+    margin-left: 10px !important;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.my-home-btn:hover {
+    filter:brightness(120%);
+    box-shadow: 10px 10px 10px #000
+}
+
+.my-home-btn:active {
+    box-shadow: inset 2px 2px 10px #000;
+}
+
+
+
+.my-home-p {
+    font-size: 15px;
+}
+
+.my-home-title{
+    font-size: 30px !important;
 }

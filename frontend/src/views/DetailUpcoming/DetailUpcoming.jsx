@@ -92,7 +92,7 @@ const DetailUpcoming = () => {
 
   const deleteOrder = (id) => {
     axios
-      .delete(`${baseURL}/${id}/orders/${id}/`)
+      .delete(`${baseURL}/upcomings/${id}/orders/${id}/`)
       .then((response) => {
         setDeletedOrder(true);
       })
