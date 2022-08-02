@@ -84,7 +84,7 @@ return (
                           </h6>
                         </Link>
                         <p className="card-text my-card-text">
-                          <span className="my-planned-date-span"> Planned Date</span>: {" "}
+                          <span className="my-planned-date-span"> Visited Date</span>: {" "}
                           {new Date(upcoming.date).toLocaleDateString(
                             "en-us",
                             {
