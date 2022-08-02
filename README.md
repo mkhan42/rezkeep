@@ -26,6 +26,15 @@ Link to  Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
 - JavaScript
 - Heroku
 - Vercel
+- HTML
+- CSS
+- Bootstrap
+
+# References
+- For auth: https://github.com/sushil-kamble/django-react-auth?fbclid=IwAR2AYzXKi5TdUbihtZ7vMrWbAGkCvBGEFUslp4Hw3ZFUwrLokzXK6IlP49o
+- For auth article: https://sushil-kamble.medium.com/django-rest-framework-react-authentication-workflow-2022-part-1-a21f22b3f358
+- Styling inspo for cards: https://mdbootstrap.com/snippets/jquery/alexq/1798251#html-tab-view
+- Understanding how Django and React work together: https://www.youtube.com/watch?v=VBqJ0-imSMU
 
 # Wireframes
 ![wireframe](./images/Wirefram4.jpg)
@@ -33,6 +42,12 @@ Link to  Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
 # ERD
 ![erd](./images/ERD4.jpg)
 
+# Project Pages
 
+## Login Page 
+![login](./images/login.png)
+
+## Register Page
+![register](./images/register.png)
 
 
