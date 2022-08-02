@@ -50,4 +50,19 @@ Link to  Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
 ## Register Page
 ![register](./images/register.png)
 
+## Home Page
+![landing](./images/landing.png)
+
+## Add Form Page
+![addrest](./images/addrest.png)
+
+## Scheduled Visits Page
+![scheduled](./images/scheduled.png)
+
+## Passed Visits Page
+![passed](./images/passed.png)
+
+## Update Visit Form Page
+![update](./images/updatevisit.png)
+
 
