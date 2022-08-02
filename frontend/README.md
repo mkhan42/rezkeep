@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Rezkeeper Frontend
+SEI 5/9 Project 4 Capstone: Rezkeeper  </br>
+Rezkeeper is a personal keeper app, in which users can schedule restaurant visits, as in enter in the name, image, address, food type (ex: desserts), the day the want to go, and the time. It's a way to keep track of all the great (or not so great) restaurants one has visited. As someone who lives in NYC, such a big place with so many great options for food, it's nice to remember all the places I've been to and all the food I liked at certain places.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
 
-## Available Scripts
+Link to site: https://frontend-rezkeeper.vercel.app/
 
-In the project directory, you can run:
+Link to Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
 
-### `npm start`
+Link to Original Big Repo: https://github.com/mkhan42/rezkeep (ps: lost 43 commits so all my commits are not here: Will estamiate a total of over 90/100 commits)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Link to backend Repo: https://github.com/mkhan42/backend-rezkeeper
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# User Story
+- As a user, we want to be able to create an account for the application and be able to log in and logout.
+- Once the user is logged in, the user should be able to schedule restaurant visits, as in enter in the name, image, address, food type (ex: desserts), the day the want to go, and the time. They can also schedule the day as a passed date because maybe they want a place to hold a great restaurant they went to.
+- Once a restaurant date is passed the current date, the restaurant gets placed in the history page.
+- Users should be able to create, read, update, and delete their restaurants, both scheduled and passed.
+- Once as restaurant gets placed in to the history page, the user can see options to add their orders, give it a rating, and write a review. (They can also delete orders, rating, and review).
+- The User should only be able to write one rating and review per restaurant, meaning that ince there is a rating or review present, those forms will disappear.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Technologies Used
+- Django
+- Django Rest Framework
+- Python
+- React
+- JavaScript
+- Heroku
+- Vercel
+- HTML
+- CSS
+- Bootstrap
 
-### `npm run build`
+# References
+- For auth: https://github.com/sushil-kamble/django-react-auth?fbclid=IwAR2AYzXKi5TdUbihtZ7vMrWbAGkCvBGEFUslp4Hw3ZFUwrLokzXK6IlP49o
+- For auth article: https://sushil-kamble.medium.com/django-rest-framework-react-authentication-workflow-2022-part-1-a21f22b3f358
+- Styling inspo for cards: https://mdbootstrap.com/snippets/jquery/alexq/1798251#html-tab-view
+- Understanding how Django and React work together: https://www.youtube.com/watch?v=VBqJ0-imSMU
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Wireframes
+![wireframe](./images/Wirefram4.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# ERD
+![erd](./images/ERD4.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Project Pages
 
-### `npm run eject`
+## Login Page 
+![login](./images/login.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Register Page
+![register](./images/register.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Home Page
+![landing](./images/landing.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Add Form Page
+![addrest](./images/addrest.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Scheduled Visits Page
+![scheduled](./images/scheduled.png)
 
-## Learn More
+## Passed Visits Page
+![passed](./images/passed.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Update Visit Form Page
+![update](./images/updatevisit.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Scheduled Visit Detail Page
+![detail](./images/scheduleddetail.png)
 
-### Code Splitting
+## Passed Visit Detail Page
+![detail](./images/passed1.png)
+![detail](./images/passed2.png)
+![detail](./images/passed3.png)
+![detail](./images/passed4.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Icebox
+![detail](./images/trelloboard.png)
+- Recreate this app in MERN-STACK
+- Fix styling some more
+- Make code more readable
+- Implement search bar to be able to search by food type, address, name, and rating
+- Fix time on card
+- Figure out auth on backend (filter user visits)
+- Use yelps API and get reviews and info about restaurants
+- Use google map API and place it in detail card
