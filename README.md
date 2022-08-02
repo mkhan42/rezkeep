@@ -65,4 +65,24 @@ Link to  Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
 ## Update Visit Form Page
 ![update](./images/updatevisit.png)
 
+## Scheduled Visit Detail Page
+![detail](./images/scheduleddetail.png)
+
+## Passed Visit Detail Page
+![detail](./images/passed1.png)
+![detail](./images/passed2.png)
+![detail](./images/passed3.png)
+![detail](./images/passed4.png)
+
+# Icebox
+![detail](./images/trelloboard.png)
+- Recreate this app in MERN-STACK
+- Fix styling some more
+- Make code more readable
+- Implement search bar to be able to search by food type, address, name, and rating
+- Fix time on card
+- Figure out auth on backend (filter user visits)
+- Use yelps API and get reviews and info about restaurants
+- Use google map API and place it in detail card
+
 
