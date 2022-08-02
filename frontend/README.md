@@ -12,7 +12,6 @@ Link to Original Big Repo: https://github.com/mkhan42/rezkeep (ps: lost 43 commi
 
 Link to backend Repo: https://github.com/mkhan42/backend-rezkeeper
 
-
 # User Story
 - As a user, we want to be able to create an account for the application and be able to log in and logout.
 - Once the user is logged in, the user should be able to schedule restaurant visits, as in enter in the name, image, address, food type (ex: desserts), the day the want to go, and the time. They can also schedule the day as a passed date because maybe they want a place to hold a great restaurant they went to.
@@ -87,3 +86,4 @@ Link to backend Repo: https://github.com/mkhan42/backend-rezkeeper
 - Figure out auth on backend (filter user visits)
 - Use yelps API and get reviews and info about restaurants
 - Use google map API and place it in detail card
+- Make it even more mobile friendly and use some media queries
