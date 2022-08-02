@@ -31,6 +31,7 @@ Link to  Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
 ![wireframe](./images/Wirefram4.jpg)
 
 # ERD
+![erd](./images/ERD4.jpg)
 
 
 
