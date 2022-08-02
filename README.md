@@ -6,9 +6,12 @@ Rezkeeper is a personal keeper app, in which users can schedule restaurant visit
 
 Link to site: https://frontend-rezkeeper.vercel.app/
 
-</br>
 
-Link to  Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
+Link to Trelloboard: https://trello.com/b/lbHHjSfe/capstone-project
+
+Link to backend Repo: https://github.com/mkhan42/backend-rezkeeper
+
+Link to Frontend Repo: https://github.com/mkhan42/frontend-rezkeeper
 
 # User Story
 - As a user, we want to be able to create an account for the application and be able to log in and logout.
