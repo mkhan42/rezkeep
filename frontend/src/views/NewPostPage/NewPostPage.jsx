@@ -6,7 +6,9 @@ import './NewPostPage.css';
 
 // const baseURL = `http://127.0.0.1:8000/api`;
 
-const baseURL = `${process.env.REACT_APP_BASE_URL}`;
+// const baseURL = `${process.env.REACT_APP_BASE_URL}`;
+
+const baseURL = `https://rezkeeper.herokuapp.com/api`;
 
 function NewPostPage({}) {
   const { user, logoutUser } = useContext(AuthContext);
@@ -62,9 +64,9 @@ function NewPostPage({}) {
     return (
         <div className='move-form'>
         <h1 className='add'>Add a Restaurant Visit</h1>
-        <div class="card add-card" style={{width: "18rem"}}>
+        <div className="card add-card" style={{width: "18rem"}}>
         <form className="add-form" onSubmit={handleSubmit}>
-        <div class="card-body">
+        <div className="card-body">
                <div className='mb-3'>
                    <label htmlFor='resturant_name' className='form-label my-add-form-label'>Restaurant Name</label>
                    <input type="text" name="resturant_name" className='form-control my-form-control' id="resturant_name" placeholder='Enter Restaurant' value={newUpcoming.resturant_name} onChange={handleChange}/>

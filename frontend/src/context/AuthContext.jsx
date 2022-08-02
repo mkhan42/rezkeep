@@ -21,10 +21,10 @@ export const AuthProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const baseURL = `${process.env.REACT_APP_BASE_URL}`;
+  // const baseURL = `${process.env.REACT_APP_BASE_URL}`;
 
   const loginUser = async (username, password) => {
-    const response = await fetch(`${baseURL}/token/`, {
+    const response = await fetch(`https://rezkeeper.herokuapp.com/api/token/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
   };
   
   const registerUser = async (username, password, password2) => {
-    const response = await fetch(`${baseURL}/register/`, {
+    const response = await fetch(`https://rezkeeper.herokuapp.com/api/register/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
