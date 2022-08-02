@@ -2,7 +2,9 @@ import React, {useState, useEffect} from 'react'
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 
-const baseURL = `http://127.0.0.1:8000/api`;
+// const baseURL = `http://127.0.0.1:8000/api`;
+
+const baseURL = `${process.env.REACT_APP_BASE_URL}`;
 
 function EditPost({ upcomings }) {
     const location = useLocation()

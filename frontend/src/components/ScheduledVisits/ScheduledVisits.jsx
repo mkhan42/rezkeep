@@ -6,7 +6,10 @@ import SearchBar from "../SearchBar";
 import "./ScheduledVisits.css";
 const moment = require("moment");
 
-const baseURL = `http://127.0.0.1:8000/api`;
+// const baseURL = `http://127.0.0.1:8000/api`;
+
+const baseURL = `${process.env.REACT_APP_BASE_URL}`;
+
 function ScheduledVisits({ upcomings }) {
   let { id } = useParams();
   const location = useLocation();

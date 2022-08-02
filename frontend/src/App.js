@@ -24,7 +24,9 @@ import HistoryPage from "./components/HistoryComponent/HistoryComponent";
 import ScheduledVisits from "./components/ScheduledVisits/ScheduledVisits";
 import Header from "./components/Header/Header";
 
-const baseURL = `http://127.0.0.1:8000/api`;
+// const baseURL = `http://127.0.0.1:8000/api`;
+
+const baseURL = `${process.env.REACT_APP_BASE_URL}`;
 
 
 function App({ user }) {

@@ -4,7 +4,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './NewPostPage.css';
 
-const baseURL = `http://127.0.0.1:8000/api`;
+// const baseURL = `http://127.0.0.1:8000/api`;
+
+const baseURL = `${process.env.REACT_APP_BASE_URL}`;
 
 function NewPostPage({}) {
   const { user, logoutUser } = useContext(AuthContext);

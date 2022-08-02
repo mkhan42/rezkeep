@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import "./DetailUpcoming.css";
 
-const baseURL = `http://127.0.0.1:8000/api`;
+// const baseURL = `http://127.0.0.1:8000/api`;
+
+const baseURL = `${process.env.REACT_APP_BASE_URL}`;
 
 const DetailUpcoming = () => {
   const { id } = useParams();
