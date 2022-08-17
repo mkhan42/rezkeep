@@ -14,8 +14,6 @@ Link to backend Repo: https://github.com/mkhan42/backend-rezkeeper
 
 Link to Frontend Repo: https://github.com/mkhan42/frontend-rezkeeper
 
-Link to backend: https://rezkeeper.herokuapp.com/api/upcomings/
-
 # User Story
 - As a user, we want to be able to create an account for the application and be able to log in and logout.
 - Once the user is logged in, the user should be able to schedule restaurant visits, as in enter in the name, image, address, food type (ex: desserts), the day the want to go, and the time. They can also schedule the day as a passed date because maybe they want a place to hold a great restaurant they went to.
