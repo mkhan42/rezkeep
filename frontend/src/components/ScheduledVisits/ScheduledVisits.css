@@ -75,3 +75,12 @@ width: 50% !important;
     font-size: 20px;
     text-decoration: underline;
 }
+
+.no-events {
+    color: white;
+    text-align: center;
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}

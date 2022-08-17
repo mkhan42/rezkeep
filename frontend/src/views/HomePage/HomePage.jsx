@@ -11,18 +11,18 @@ const Home = ({ upcomings }) => {
   return (
     <>
 
-    <div>
+    {/* <div>
       {user ? ( 
         <>
           <UserInfo upcomings={upcomings} state={upcomings} user={user} />
         </>
         ) : ( <Navigate to="/login" />)
       }
-    </div>
-{/* 
+    </div> */}
+
     <section>
       {user && <UserInfo upcomings={upcomings} state={upcomings} user={user} />}
-    </section> */}
+    </section>
     {/* <section>
       {user && <UserInfo upcomings={upcomings} state={upcomings} user={user} />}
     </section> */}
