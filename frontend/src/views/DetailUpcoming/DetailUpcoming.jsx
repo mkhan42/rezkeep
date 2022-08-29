@@ -9,6 +9,9 @@ import "./DetailUpcoming.css";
 
 const baseURL = `https://rezkeeper.herokuapp.com/api`;
 
+// const baseURL = `https://web-production-31a9.up.railway.app/api`;
+
+
 const DetailUpcoming = () => {
   const { id } = useParams();
 

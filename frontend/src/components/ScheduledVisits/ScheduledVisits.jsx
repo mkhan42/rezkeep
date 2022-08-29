@@ -36,6 +36,7 @@ function ScheduledVisits({ upcomings }) {
   const [deleted, setDeleted] = useState(false);
 
   const deletePost = (id) => {
+    // axios.delete(`https://web-production-31a9.up.railway.app/api/upcomings/${id}/`)
     axios
       .delete(`https://rezkeeper.herokuapp.com/api/upcomings/${id}/`)
       .then((response) => {
